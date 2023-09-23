@@ -1,0 +1,59 @@
+/* Nullify margins and padding */
+html, body, div, h1, h2, h3, h4, h5, h6, p, ol, ul, li, dl, dt, dd, img, figure, figcaption, fieldset, form, label, legend, article, aside, footer, header, hgroup, menu, nav, section, button, input, select, textarea {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Nullify list styles */
+  ul, ol {
+    list-style: none;
+  }
+  
+  /* Nullify anchors */
+  a {
+    text-decoration: none;
+  }
+  
+  /* Nullify text styling */
+  body {
+    font-size: 100%;
+    line-height: 1;
+    font-family: Arial, sans-serif;
+    background: none;
+    color: black;
+  }
+  
+  /* Nullify images */
+  img {
+    border: 0;
+  }
+  
+  /* Nullify form elements */
+  button, input, select, textarea {
+    margin: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+  }
+  
+  /* Nullify table elements */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  /* And so on... */
+
+  /* General Settings */
+
+  html {
+    font-size: 16px;  /* This is usually the default */
+  }
+
+  @media (min-width: 1024px) {
+    /* CSS rules */
+
+    .top-wrapper {
+        background-color: lightgray;
+        height: 25px;
+    }
+  }
