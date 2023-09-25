@@ -1,59 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+
 /* Nullify margins and padding */
-html, body, div, h1, h2, h3, h4, h5, h6, p, ol, ul, li, dl, dt, dd, img, figure, figcaption, fieldset, form, label, legend, article, aside, footer, header, hgroup, menu, nav, section, button, input, select, textarea {
-    margin: 0;
-    padding: 0;
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+img,
+figure,
+figcaption,
+fieldset,
+form,
+label,
+legend,
+article,
+aside,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+/* Nullify list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Nullify anchors */
+a {
+  text-decoration: none;
+}
+
+/* Nullify text styling */
+body {
+  font-size: 100%;
+  line-height: 1;
+  font-family: Arial, sans-serif;
+  background: none;
+  color: black;
+}
+
+/* Nullify images */
+img {
+  border: 0;
+}
+
+/* Nullify form elements */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* Nullify table elements */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* And so on... */
+
+/* General Settings */
+
+html {
+  font-size: 16px;
+  /* This is usually the default */
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+@media (min-width: 1024px) {
+  /* CSS rules */
+
+  .top-wrapper {
+    background-color: #262626;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  
-  /* Nullify list styles */
-  ul, ol {
-    list-style: none;
+
+  .top-wrapper h1 {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
   }
-  
-  /* Nullify anchors */
-  a {
-    text-decoration: none;
+
+  .menu-wrapper {
+    display: flex;
+    padding-top: 25px;
+    height: 70px;
+    justify-content: space-around;
+    align-items: center;
   }
-  
-  /* Nullify text styling */
-  body {
-    font-size: 100%;
-    line-height: 1;
-    font-family: Arial, sans-serif;
+
+  .search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 300px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 20px 20px 20px 15px; /* Add padding on the right for the button */
+    border: 1px solid #fafafa;
+    background-color: #fafafa;
+    border-radius: 12px;
+    outline: none;
+    transition: border 0.2s;
+    color:#262626;
+    font-size: 1rem;
+    font-weight: 400;
+
+  }
+
+.search-input:focus {
+    border-color: #2563EB; /* Highlight color when focused */
+}
+
+.search-btn {
     background: none;
-    color: black;
-  }
-  
-  /* Nullify images */
-  img {
-    border: 0;
-  }
-  
-  /* Nullify form elements */
-  button, input, select, textarea {
-    margin: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-  }
-  
-  /* Nullify table elements */
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-  
-  /* And so on... */
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    font-size: 18px;
+    color: #262626;
+}
 
-  /* General Settings */
+.search-btn:hover {
+    color: #2563EB; /* Change icon color on hover */
+}
 
-  html {
-    font-size: 16px;  /* This is usually the default */
-  }
-
-  @media (min-width: 1024px) {
-    /* CSS rules */
-
-    .top-wrapper {
-        background-color: lightgray;
-        height: 25px;
-    }
-  }
+.search-btn:focus {
+    outline: none;
+}
+}

@@ -6,12 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page_title }}</title>
     <link rel="stylesheet" type="text/css" href="/assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
     <header>
         <div class="top-wrapper">
-
+                <h1>🚚Free delivery if you buy over £60</h1>
+        </div>
+        <div class="menu-wrapper">
+            <div class="logo">MyMovingBox</div>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search...">
+                <button class="search-btn">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <div class="contact-us">
+                <label for="contacts">Call Now: <span>01604372373</span></label> <!-- Not the correct approach -->
+    
+                <select name="contacts" id="contacts">
+                    <option value="map">Map</option>
+                    <option value="w3w">w3w</option>
+                    <option value="email">Email</option>
+                </select>
+            </div>
+            <div class="cart">Money to Pay: £60</div>
         </div>
     </header>
 </body>
