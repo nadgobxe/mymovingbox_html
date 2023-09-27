@@ -12,26 +12,52 @@
 <body>
     <header>
         <div class="top-wrapper">
-                <h1>🚚Free delivery if you buy over £60</h1>
+            <h1>🚚Free delivery if you buy over £60</h1>
         </div>
         <div class="menu-wrapper">
-            <div class="logo">MyMovingBox</div>
-            <div class="search-container">
-                <input type="text" class="search-input" placeholder="Search...">
+            <div class="logo">MyMovingBox</div> <!-- Logo -->
+
+            <div class="search-container"> <!-- Search -->
+                <input type="text" class="search-input" placeholder="Search..."> 
                 <button class="search-btn">
                     <i class="fa fa-search"></i>
                 </button>
             </div>
-            <div class="contact-us">
-                <label for="contacts">Call Now: <span>01604372373</span></label> <!-- Not the correct approach I will use javascript or css -->
-    
-                <select name="contacts" id="contacts">
-                    <option value="map">Map</option>
-                    <option value="w3w">w3w</option>
-                    <option value="email">Email</option>
-                </select>
+
+            <div class="contact-us"> <!-- Contact Us -->
+                <div>
+                    <i class="fas fa-headset"></i>
+                </div>
+                <div>
+                    <p>Call Now:</p>
+                    <p>01604-372373</p>
+                </div>
+               
+                <div id="chevron">
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="drop-down">
+                        drop down contact us
+                        <a href="#">LOL1</a><a href="#">LOL2</a><a href="#">LOL3</a>
+                    </div>
+                </div>
             </div>
-            <div class="cart">Money to Pay: £60</div>
+
+            <div class="cart"> <!-- Cart -->
+                <div>
+                    <div><i class="fas fa-shopping-bag"></i></div>
+                    <div>0</div>
+
+                </div>
+                <div>
+                    <p>Subtotal</p>
+                    <p>£0.00</p>
+                </div>
+
+
+            </div>
+
+           
+
         </div>
     </header>
 </body>

@@ -126,27 +126,29 @@ body {
     align-items: center;
     position: relative;
     width: 300px;
-}
+  }
 
-.search-input {
+  .search-input {
     width: 100%;
-    padding: 20px 20px 20px 15px; /* Add padding on the right for the button */
+    padding: 20px 20px 20px 15px;
+    /* Add padding on the right for the button */
     border: 1px solid #fafafa;
     background-color: #fafafa;
     border-radius: 12px;
     outline: none;
     transition: border 0.2s;
-    color:#262626;
+    color: #262626;
     font-size: 1rem;
     font-weight: 400;
 
   }
 
-.search-input:focus {
-    border-color: #2563EB; /* Highlight color when focused */
-}
+  .search-input:focus {
+    border-color: #2563EB;
+    /* Highlight color when focused */
+  }
 
-.search-btn {
+  .search-btn {
     background: none;
     border: none;
     cursor: pointer;
@@ -154,13 +156,103 @@ body {
     right: 10px;
     font-size: 18px;
     color: #262626;
-}
+  }
 
-.search-btn:hover {
-    color: #2563EB; /* Change icon color on hover */
-}
+  .search-btn:hover {
+    color: #2563EB;
+    /* Change icon color on hover */
+  }
 
-.search-btn:focus {
+  .search-btn:focus {
     outline: none;
+  }
+
+
+  .contact-us {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .contact-us>div:first-child>i {
+    font-size: 2.25rem;
+  }
+
+  .contact-us>div:last-child>i {
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 50%;
+    font-weight: 900;
+    transition: background-color 2500ms, color 2500ms;
+    cursor: pointer;
+
+  }
+
+  .contact-us>div:last-child>i:hover {
+    color: #fafafa;
+    background-color: #262626;
+    border-radius: 50%;
+  }
+
+  .contact-us>div>p {
+    padding: 5px;
+  }
+
+  .contact-us>div>p:last-child {
+    font-weight: 600;
+  }
+
+  .cart {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .cart>div>div>i {
+    font-size: 2.25rem;
+  }
+
+  .car>div>p {
+    padding: 5px;
+  }
+
+  .cart>div>p:last-child {
+    font-weight: 600;
+  }
+
+  .cart>div:first-child {
+    position: relative;
+  }
+
+  .cart>div>div:last-child {
+    background-color: #2563EB;
+    border: 1px solid #262626;
+    border-radius: 50%;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    padding: 1px;
+    top: 0;
+    right: -25%;
+    color: #fafafa;
+  }
+
+  .drop-down {
+    display: none;
+    position: absolute;
+    top: 200px;
+    right:50%;
+    background-color: #970000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  #chevron {
+    position: relative;
+  }
+
+  #chevron:hover .drop-down {
+    display: block;
 }
 }
