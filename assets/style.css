@@ -178,8 +178,9 @@ body {
     font-size: 2.25rem;
   }
 
-  .contact-us>div:last-child>i {
+  .contact-us>div:last-child>a>i {
     font-size: 1.2rem;
+    color: #262626;
     padding: 5px;
     border-radius: 50%;
     font-weight: 900;
@@ -187,8 +188,8 @@ body {
     cursor: pointer;
 
   }
-
-  .contact-us>div:last-child>i:hover {
+ 
+  .contact-us>div:last-child>a>i:hover {
     color: #fafafa;
     background-color: #262626;
     border-radius: 50%;
@@ -241,18 +242,18 @@ body {
   .drop-down {
     display: none;
     position: absolute;
-    top: 200px;
+    padding: 20px;
+    top: 50px;
     right:50%;
-    background-color: #970000;
+    background-color: #fafafa;
     min-width: 160px;
+    min-height: 10vh;;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    border-radius: 10px;
   }
   #chevron {
     position: relative;
   }
 
-  #chevron:hover .drop-down {
-    display: block;
-}
 }
