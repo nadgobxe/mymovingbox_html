@@ -7,6 +7,7 @@
     <title>{{ page_title }}</title>
     <link rel="stylesheet" type="text/css" href="/assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="assets/app.js"></script>
 </head>
 
@@ -37,14 +38,25 @@
                 <div id="chevron">
                     <a href="#"><i class="fas fa-chevron-down"></i></a>
                     <div class="drop-down">
-                        <div></div>
-                        <div></div>
+
+                        <div>
+                            <div><i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p>Address:</p>
+                                <p>58 Bunting Road, Northampton, NN2 6EE</p>
+                            </div>
+                        </div>
+
+                        <div>
+                        <div id="map"></div>
+                        </div>
                         <div></div>
                         <div></div>
                     </div>
                 </div>
             </div>
-
+            
             <div class="cart"> <!-- Cart -->
                 <div>
                     <div><i class="fas fa-shopping-bag"></i></div>
@@ -63,6 +75,10 @@
 
         </div>
     </header>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIIVOAXnyTqlmTyprocfMFEp2_lwYNn5E&callback=initMap&v=weekly"
+    defer
+  ></script>
 </body>
 
 </html>
