@@ -16,7 +16,7 @@ function initMap() {
 
 function myLoadFunction() {
 
-    const chevronButton = document.getElementById('chevron');
+    const chevronButton = document.getElementById('chevron1');
     const dropDown = document.querySelector('.drop-down');
 
     const dropDownEffect = () => {
