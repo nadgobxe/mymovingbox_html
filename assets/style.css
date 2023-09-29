@@ -154,7 +154,7 @@ body {
     cursor: pointer;
     position: absolute;
     right: 10px;
-    font-size: 18px;
+    font-size: 2rem;
     color: #262626;
   }
 
@@ -179,12 +179,14 @@ body {
 
   .contact-us>div:first-child>i {
     font-size: 2.25rem;
+    padding-left: 20px;
   }
 
   .contact-us>div:last-child>a>i {
     font-size: 1.2rem;
     color: #262626;
     padding: 5px;
+    margin-right: 20px;
     border-radius: 50%;
     font-weight: 900;
     transition: background-color 2500ms, color 2500ms;
