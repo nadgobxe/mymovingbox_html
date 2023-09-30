@@ -32,6 +32,10 @@ function myLoadFunction() {
     // }
     chevronButton.addEventListener('click', dropDownEffect);
     // chevronButton.addEventListener('mouseleave', hideDropDown);
+
+    document.querySelector('.contact-us>div:last-child>a>i').addEventListener('click', function() {
+        this.classList.toggle('rotated');
+    });
 }
 
 document.addEventListener('DOMContentLoaded', myLoadFunction);
