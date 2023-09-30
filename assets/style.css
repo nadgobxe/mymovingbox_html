@@ -189,7 +189,7 @@ body {
     margin-right: 20px;
     border-radius: 50%;
     font-weight: 900;
-    transition: background-color 2500ms, color 2500ms;
+    transition: background-color 2500ms, color 2500ms, transform 0.5s;
     cursor: pointer;
 
   }
@@ -198,6 +198,7 @@ body {
     color: #fafafa;
     background-color: #262626;
     border-radius: 50%;
+    transform: rotate(180deg);
   }
 
   .contact-us>div>p {
@@ -308,7 +309,7 @@ body {
   }
 
   nav {
-    background-color: #464F54;
+    background-color: #262626;
     height: 75px;
     width: 100%;
     display: flex;
@@ -364,17 +365,25 @@ body {
     font-weight: 500;
   }
 
+  nav ul li>ul>li>a::before {
+    content: ">"; }
+
+  nav ul li>ul>li>a:hover::before {
+    content: "<"
+  }
+
   nav>ul>li:has(> ul)::after {
     content: "\f078";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     /* For solid icons */
     position: absolute;
-    right: -30px;
-    top: 10px;
-    transform: translateY(-50%);
-    /* Additional styles for the chevron */
+    margin-right: -30px;
+    transition: transform 0.5s;
     padding-right: 10px;
   }
 
+  nav>ul>li:has(> ul):hover::after {
+    transform: rotate(180deg);
+  }
 }
