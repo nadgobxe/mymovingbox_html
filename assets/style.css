@@ -119,41 +119,48 @@ body {
     font-size: 1.5rem;
   }
 
-  .top-wrapper > div {
+  .top-wrapper>div {
     display: flex;
     gap: 0.25rem;
     position: relative;
   }
 
-  .top-wrapper > div:last-child > i {
+  .top-wrapper>div:last-child>i {
     padding-left: 5px;
   }
 
-  .top-wrapper .currencylist {
-    background-color:#262626;
-    display: block;
+  .top-wrapper .currencylist,
+  .top-wrapper .languagelist {
+    display: none;
+    background-color: #262626;
     width: 10vw;
     min-height: 50px;
     max-height: 200px;
     position: absolute;
-    top:45px;
+    top: 45px;
     right: 0;
     z-index: 10;
     border-radius: 5px;
-    
+    border: 2px solid #fafafa;
+
   }
-  
-  .currencylist li {
-    margin: 0.5rem 2.2rem;
+
+  .currencylist li,
+  .languagelist li {
+    margin: 0.75rem 1.1rem;
   }
-  .currencylist a {
+  .top-wrapper i {
+    padding-left: 0.5rem;
+  }
+  .top-wrapper a {
     color: #fafafa;
     padding: 5px;
   }
 
-  .currencylist a:hover {
+  .top-wrapper a:hover {
     opacity: 0.75;
   }
+
   .menu-wrapper {
     display: flex;
     padding-top: 25px;
@@ -638,4 +645,12 @@ body {
     display: flex;
     justify-content: center;
   }
+
+  .collections {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+    }
 }

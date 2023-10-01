@@ -17,21 +17,25 @@ function initMap() {
 function myLoadFunction() {
 
     const chevronButton = document.getElementById('chevron1');
+    const chevronButtonCurrency = document.getElementById('currency');
+    const chevronButtonLanguage = document.getElementById('language');
     const dropDown = document.querySelector('.drop-down');
+    const dropDownCurrency = document.querySelector('.currencylist');
+    const dropDownLanguage = document.querySelector('.languagelist');
 
-    const dropDownEffect = () => {
-        if (dropDown.style.display === "block") {
-            dropDown.style.display = "none";
-        } else {
-            dropDown.style.display = "block";
-        }
+    const dropDownEffect = (el) => {
+        return () => {
+            if (el.style.display === "block") {
+                el.style.display = "none";
+            } else {
+                el.style.display = "block";
+            }
+        };
     };
 
-    // const hideDropDown = () => {
-    //     dropDown.style.display = "none";
-    // }
-    chevronButton.addEventListener('click', dropDownEffect);
-    // chevronButton.addEventListener('mouseleave', hideDropDown);
+    chevronButton.addEventListener('click', dropDownEffect(dropDown));
+    chevronButtonCurrency.addEventListener('click', dropDownEffect(dropDownCurrency));
+    chevronButtonLanguage.addEventListener('click', dropDownEffect(dropDownLanguage));
 
     document.querySelector('.contact-us>div:last-child>a>i').addEventListener('click', function() {
         this.classList.toggle('rotated');
