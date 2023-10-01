@@ -103,8 +103,14 @@ body {
     background-color: #262626;
     height: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    color: #fafafa;
+    padding: 5px;
+  }
+
+  .top-wrapper a {
+    color: #fafafa;
   }
 
   .top-wrapper h1 {
@@ -113,12 +119,64 @@ body {
     font-size: 1.5rem;
   }
 
+  .top-wrapper > div {
+    display: flex;
+    gap: 0.25rem;
+    position: relative;
+  }
+
+  .top-wrapper > div:last-child > i {
+    padding-left: 5px;
+  }
+
+  .top-wrapper .currencylist {
+    background-color:#262626;
+    display: block;
+    width: 10vw;
+    min-height: 50px;
+    max-height: 200px;
+    position: absolute;
+    top:45px;
+    right: 0;
+    z-index: 10;
+    border-radius: 5px;
+    
+  }
+  
+  .currencylist li {
+    margin: 0.5rem 2.2rem;
+  }
+  .currencylist a {
+    color: #fafafa;
+    padding: 5px;
+  }
+
+  .currencylist a:hover {
+    opacity: 0.75;
+  }
   .menu-wrapper {
     display: flex;
     padding-top: 25px;
     height: 70px;
     justify-content: space-around;
     align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .logo>div>i {
+    font-size: 2.5rem;
+    color: #2563EB;
+  }
+
+  .logo>div>p {
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
   }
 
   .search-container {
@@ -156,10 +214,14 @@ body {
     right: 10px;
     font-size: 2rem;
     color: #262626;
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+
   }
 
   .search-btn:hover {
     color: #2563EB;
+    transform: scale(1.1);
     /* Change icon color on hover */
   }
 
@@ -192,21 +254,34 @@ body {
     transition: background-color 2500ms, color 2500ms, transform 0.5s;
     cursor: pointer;
 
+
   }
 
   .contact-us>div:last-child>a>i:hover {
     color: #fafafa;
     background-color: #262626;
     border-radius: 50%;
+
+
   }
 
   .contact-us>div>p {
     padding: 5px;
+
+  }
+
+  .contact-us>div>p:last-child>a {
+    color: #262626;
+    cursor: pointer;
+  }
+
+  .contact-us>div>p:last-child>a:hover {
+    color: #d4d4d4;
   }
 
   .contact-us>div:last-child>a>i.rotated {
     transform: rotate(180deg);
-}
+  }
 
 
   .contact-us>div>p:last-child {
@@ -221,6 +296,14 @@ body {
 
   .cart>div>div>i {
     font-size: 2.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .cart>div>div>i:hover {
+    transform: scale(1.1);
   }
 
   .car>div>p {
@@ -338,6 +421,53 @@ body {
     position: relative;
   }
 
+  nav>ul>li>a {
+    position: relative;
+    padding: 5px;
+  }
+
+  nav>ul>li>a:hover {
+    border-top: 1px solid #fafafa;
+  }
+
+  nav>ul>li>a::before {
+    transform: translateX(100%);
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 99.5%;
+    height: 2px;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+  }
+
+  nav>ul>li>a::after {
+    transform: translateX(-100%);
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 99.5%;
+    height: 2px;
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+  }
+
+  nav>ul>li>a:hover:before {
+    transition: .1s transform linear, .1s height linear .1s;
+    transform: translateX(0);
+    height: 100%;
+    border-color: #fafafa;
+  }
+
+  nav>ul>li>a:hover::after {
+    transition: .1s transform linear .2s, .1s height linear .3s;
+    transform: translateX(0);
+    height: 100%;
+    border-color: #fafafa;
+  }
+
   nav>ul>li>ul {
     position: absolute;
     opacity: 0;
@@ -349,7 +479,6 @@ body {
     width: 100%;
     transition: opacity 0.5s ease-in-out;
     pointer-events: none;
-
   }
 
   nav ul li:hover ul {
@@ -369,13 +498,13 @@ body {
   }
 
   nav ul li>ul>li>a::before {
-    content: ">"; 
+    content: "+";
     font-weight: 900;
   }
 
   nav ul li>ul>li>a:hover::before {
-    content: "<";
-    
+    content: ">";
+
   }
 
   nav>ul>li:has(> ul)::after {
@@ -388,4 +517,125 @@ body {
     padding-right: 20px;
   }
 
+  nav>ul>li>span {
+    background-color: #dc2626;
+    border: #dc2626;
+    position: absolute;
+    padding: 5px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    top: -1.5rem;
+    right: -1.75rem;
+    border-radius: 0.5rem;
+  }
+
+  nav>ul>li>span::after {
+    content: "";
+    border: 0.4rem solid;
+    border-color: inherit;
+    position: absolute;
+    top: 25%;
+    left: 0.5rem;
+    border-bottom-color: transparent !important;
+    border-right-color: transparent !important;
+    transform: translateY(calc(-50% + 1rem));
+  }
+
+  .hero {
+    background-color: #262626;
+    height: calc(100vh - 290px);
+    display: flex;
+    padding: 25px 0 0 25px;
+    justify-content: space-between;
+    color: #fafafa;
+  }
+
+  .hero>div:first-child {
+    padding: 50px 0px 50px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .hero>div:last-child {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .hero>div>h1 {
+    font-size: 3.75rem;
+    font-weight: 600;
+    white-space: pre-wrap;
+    width: 90%;
+  }
+
+  .hero>div>p {
+    font-size: 1.62rem;
+    font-weight: 400;
+    white-space: pre-wrap;
+    width: 90%;
+  }
+
+  .hero>div>h2 {
+    font-size: 2.43rem;
+    font-weight: 500;
+    white-space: pre-wrap;
+    width: 90%;
+  }
+
+  .hero>div>button {
+    width: 200px;
+    height: 75px;
+    /* border: 10px solid #fafafa; */
+    background-color: #262626;
+    color: #fafafa;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+
+  .button-89 {
+    --b: 3px;
+    /* border thickness */
+    --s: .25em;
+    /* size of the corner */
+    --color: #fafafa;
+
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #262626;
+    outline-offset: .6em;
+    font-size: 16px;
+
+    border: 0;
+
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .button-89:hover,
+  .button-89:focus-visible {
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+  }
+
+  .button-89:active {
+    background: var(--color);
+    color: #fff;
+  }
+
+  .social-proof {
+    background-color: #FFE600;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+  }
 }

@@ -9,15 +9,55 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="assets/app.js"></script>
+    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 </head>
 
 <body>
     <header>
         <div class="top-wrapper">
-            <h1>🚚Free delivery if you buy over £60</h1>
+            <div>
+                <p>🚚Free delivery if you buy over £60</p>
+            </div>
+
+            <div>
+                <p>United Kingdom (GBP £)</p><a id='currency' href="#"><i class="fas fa-chevron-down"></i></a>
+                <div class="currencylist">
+                    <ul>
+                        <li><a href="#">Booty</a></li>
+                        <li><a href="#">Booty</a></li>
+                        <li><a href="#">Booty</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <p>English</p><a id='language' href="#"><i class="fas fa-chevron-down"></i></a>
+                <div class="languagelist">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <i class="fab fa-facebook"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fab fa-instagram"></i>
+
+            </div>
+
+
         </div>
         <div class="menu-wrapper">
-            <div class="logo">MyMovingBox</div> <!-- Logo -->
+            <div class="logo">
+                <div><i class="fas fa-box-open"></i></div>
+                <div>
+                    <p>MyMovingBox</p>
+                </div>
+
+
+            </div> <!-- Logo -->
 
             <div class="search-container"> <!-- Search -->
                 <input type="text" class="search-input" placeholder="Search...">
@@ -32,7 +72,7 @@
                 </div>
                 <div>
                     <p>Call Now:</p>
-                    <p>01604-372373</p>
+                    <p><a href="tel:+441604372373">01604-372373</a></p>
                 </div>
 
                 <div id="chevron">
@@ -88,11 +128,12 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a>
-                    <span>Sale</span>               </li>
+                    <span>Sale</span>
+                </li>
                 <li><a href="#">Packing Materials</a>
                     <ul>
                         <li><a href="#">Test</a></li>
-                        
+
                     </ul>
                 </li>
                 <li><a href="#">Boxes</a>
@@ -105,6 +146,26 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <div class="hero">
+            <div>
+                <h1>Making Your Move Effortless, One Box at a Time</h1>
+                <p>High-Quality, Eco-Friendly Packing Boxes Delivered Right to Your Doorstep</p>
+                <h2>Start Packing with Ease Today!</h2>
+                <button class="button-89" role="button">Shop Now</button>
+            </div>
+
+            <div><img src="/assets/boxmodel.png" width="650px" height="650px" alt="Hero Image"></div>
+        </div>
+        <div class="social-proof">
+            <div class="trustpilot-widget" data-locale="en-GB" data-template-id="5419b6a8b0d04a076446a9ad"
+                data-businessunit-id="5c3a4b2ca393c000016fd021" data-style-height="24px" data-style-width="100%"
+                data-theme="light" data-min-review-count="10" data-style-alignment="center">
+                <a href="https://uk.trustpilot.com/review/mymovingbox.co.uk" target="_blank"
+                    rel="noopener">Trustpilot</a>
+            </div>
+        </div>
+    </main>
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIIVOAXnyTqlmTyprocfMFEp2_lwYNn5E&callback=initMap&v=weekly"
         defer></script>
