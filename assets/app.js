@@ -53,7 +53,7 @@ function myLoadFunction() {
         this.classList.toggle('rotated');
     });
 
-    const element = document.getElementById("more-products-button");
+    const element = document.getElementById("more-products-button"); // Extra width and height of more-products button
     const elementWidth = window.getComputedStyle(element).getPropertyValue("width");
     const elementHeight = window.getComputedStyle(element).getPropertyValue("height");
     document.documentElement.style.setProperty('--button-width', elementWidth);
