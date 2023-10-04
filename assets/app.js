@@ -52,6 +52,12 @@ function myLoadFunction() {
     document.querySelector('.contact-us>div:last-child>a>i').addEventListener('click', function() {
         this.classList.toggle('rotated');
     });
+
+    const element = document.getElementById("more-products-button");
+    const elementWidth = window.getComputedStyle(element).getPropertyValue("width");
+    const elementHeight = window.getComputedStyle(element).getPropertyValue("height");
+    document.documentElement.style.setProperty('--button-width', elementWidth);
+    document.documentElement.style.setProperty('--button-height', elementHeight);
 }
 
 document.addEventListener('DOMContentLoaded', myLoadFunction);

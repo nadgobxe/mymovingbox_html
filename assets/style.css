@@ -788,8 +788,37 @@ body {
     display: flex;
     padding-right: 0.5rem;
   }
+  .more-products {
+    display: flex;
+    column-gap: 2rem;
+    align-items: center;
+    position: relative;
 
-  /* CSS */
+  }
+  .more-products hr {
+    flex-grow: 1;
+    color: transparent;
+    border: 0.125rem dashed #2626264a;
+    height: var(--button-height);
+  }
+
+  .more-products hr::before {
+    content: "Order Today";
+    text-align: center;
+    /* width: var(--button-height);
+    height: var(--button-height); */
+    color: #262626;
+    /* background-image: url('/assets/previous_5436639.png'); */
+    background-position: center;
+    padding: 5px;
+    /* background-repeat: no-repeat;
+    background-size: contain; */
+    position: absolute;
+    /* background-color: #fff; */
+    top:30%;
+    /* right:calc(100% - var(--button-width)*1.5); */
+  }
+  
   .button-30 {
     align-items: center;
     appearance: none;
