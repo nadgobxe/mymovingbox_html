@@ -688,11 +688,13 @@ body {
       align-items: baseline;
       border: 1px solid #26262612;
       padding: 15px;
-      transition: transform 500ms ease-in-out, border 500ms ease, border-radius 500ms ease, box-shadow 500ms ease; 
+      transition: transform 300ms ease-in-out, border 500ms ease, border-radius 500ms ease, box-shadow 500ms ease;
+      background-color: #ffffff;
     }
 
     .card:hover {
-      transform: translateY(-2%);
+      /* transform: translateY(-2%); */
+      transform: scale(1.05);
       border: 1px solid #26262612;
       border-radius: 15px;
       box-shadow: 3px -3px 5px 3px #26262612, 3px 3px 5px 3px #26262606;
@@ -736,8 +738,13 @@ body {
       border: none;
       background-color: transparent;
       margin-right: 7.5%;
+      cursor: pointer;
+      transition: transform 500ms ease-in-out;
     }
 
+    .card .add-to-cart button:last-child:hover {
+      transform: scale(1.2);
+    }
     .card:hover .add-to-cart {
       opacity: 1;
     }
