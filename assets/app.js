@@ -22,6 +22,8 @@ function myLoadFunction() {
     const dropDown = document.querySelector('.drop-down');
     const dropDownCurrency = document.querySelector('.currencylist');
     const dropDownLanguage = document.querySelector('.languagelist');
+    const infoButton = document.getElementById('infobutton');
+    const closeInfoButton = document.getElementById('close-slideover');
 
     const dropDownEffect = (el) => {
         return () => {
@@ -45,9 +47,27 @@ function myLoadFunction() {
         });
     });
 
+    function showInfoCard(e) {
+        e.preventDefault();
+        const selectInfoCardClass = document.getElementsByClassName('main-card-slideover')[0];
+        const selectInfoButton = document.querySelector("#infobutton > i");
+        selectInfoButton.style.display = 'none';
+        selectInfoCardClass.style.right = "-20%";
+    }
+
+    function closeInfoCard(e) {
+        e.preventDefault();
+        const selectInfoCardClass = document.getElementsByClassName('main-card-slideover')[0];
+        const selectInfoButton = document.querySelector("#infobutton > i");
+        selectInfoButton.style.display = 'block';
+        selectInfoCardClass.style.right = "-55%";
+    }
+
     chevronButton.addEventListener('click', dropDownEffect(dropDown));
     chevronButtonCurrency.addEventListener('click', dropDownEffect(dropDownCurrency));
     chevronButtonLanguage.addEventListener('click', dropDownEffect(dropDownLanguage));
+    infoButton.addEventListener('click', showInfoCard);
+    closeInfoButton.addEventListener('click', closeInfoCard);
 
     document.querySelector('.contact-us>div:last-child>a>i').addEventListener('click', function() {
         this.classList.toggle('rotated');
