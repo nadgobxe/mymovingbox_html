@@ -52,7 +52,7 @@ function myLoadFunction() {
         const selectInfoCardClass = document.getElementsByClassName('main-card-slideover')[0];
         const selectInfoButton = document.querySelector("#infobutton > i");
         selectInfoButton.style.display = 'none';
-        selectInfoCardClass.style.right = "-20%";
+        selectInfoCardClass.style.right = "0%";
     }
 
     function closeInfoCard(e) {
