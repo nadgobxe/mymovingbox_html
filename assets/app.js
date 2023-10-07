@@ -59,7 +59,9 @@ function myLoadFunction() {
         e.preventDefault();
         const selectInfoCardClass = document.getElementsByClassName('main-card-slideover')[0];
         const selectInfoButton = document.querySelector("#infobutton > i");
-        selectInfoButton.style.display = 'block';
+        setTimeout(function() {
+            selectInfoButton.style.display = 'block';
+        }, 750)
         selectInfoCardClass.style.right = "-55%";
     }
 
